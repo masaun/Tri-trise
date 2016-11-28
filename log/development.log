@@ -4844,3 +4844,890 @@ Processing by PropertiesController#index as HTML
 Completed 200 OK in 32ms (Views: 28.6ms | ActiveRecord: 0.2ms)
 
 
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/posts/new" for ::1 at 2016-11-28 22:23:42 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  
+ActionController::RoutingError (No route matches [GET] "/posts/new"):
+  
+actionpack (5.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
+web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.1.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0) lib/rails/engine.rb:522:in `call'
+puma (3.6.0) lib/puma/configuration.rb:225:in `call'
+puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.0) lib/puma/server.rb:415:in `process_client'
+puma (3.6.0) lib/puma/server.rb:275:in `block in run'
+puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering /Users/unomasanori/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/unomasanori/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/unomasanori/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered collection of /Users/unomasanori/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb [8 times] (11.0ms)
+  Rendered /Users/unomasanori/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (10.2ms)
+  Rendering /Users/unomasanori/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/unomasanori/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (12.0ms)
+  Rendered /Users/unomasanori/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (143.4ms)
+Started GET "/properties/new" for ::1 at 2016-11-28 22:23:49 +0900
+Processing by PropertiesController#new as HTML
+  Rendering properties/new.html.erb within layouts/application
+  Rendered properties/new.html.erb within layouts/application (19.5ms)
+Completed 500 Internal Server Error in 50ms (ActiveRecord: 1.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `line_name' for #<Property:0x007fb853095ac0>
+Did you mean?  line_name_1
+               line_name_2
+               line_name_2?
+               line_name_2=
+               line_name_1=
+               line_name_1?):
+    30:   <h2>最寄り駅1</h2>
+    31:     <p>
+    32:       <%= f.label :line_name, "路線名" %><br>
+    33:       <%= f.text_field :line_name %>
+    34:     </p>
+    35: 
+    36:     <p>
+  
+app/views/properties/new.html.erb:33:in `block in _app_views_properties_new_html_erb__3289634382663162925_70214810714840'
+app/views/properties/new.html.erb:2:in `_app_views_properties_new_html_erb__3289634382663162925_70214810714840'
+  Rendering /Users/unomasanori/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/unomasanori/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/unomasanori/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (7.9ms)
+  Rendering /Users/unomasanori/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/unomasanori/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendering /Users/unomasanori/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/unomasanori/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/unomasanori/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (99.0ms)
+Started GET "/properties/new" for ::1 at 2016-11-28 22:24:54 +0900
+Processing by PropertiesController#new as HTML
+  Rendering properties/new.html.erb within layouts/application
+  Rendered properties/new.html.erb within layouts/application (13.6ms)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `line_name' for #<Property:0x007fb8531ce8b0>
+Did you mean?  line_name_1
+               line_name_2
+               line_name_2?
+               line_name_2=
+               line_name_1=
+               line_name_1?):
+    30:   <h2>最寄り駅1</h2>
+    31:     <p>
+    32:       <%= f.label :line_name, "路線名" %><br>
+    33:       <%= f.text_field :line_name %>
+    34:     </p>
+    35: 
+    36:     <p>
+  
+app/views/properties/new.html.erb:33:in `block in _app_views_properties_new_html_erb__3289634382663162925_70214822552500'
+app/views/properties/new.html.erb:2:in `_app_views_properties_new_html_erb__3289634382663162925_70214822552500'
+  Rendering /Users/unomasanori/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/unomasanori/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/unomasanori/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.9ms)
+  Rendering /Users/unomasanori/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/unomasanori/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendering /Users/unomasanori/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/unomasanori/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/unomasanori/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (83.1ms)
+Started GET "/properties" for ::1 at 2016-11-28 22:25:58 +0900
+Processing by PropertiesController#index as HTML
+  Rendering properties/index.html.erb within layouts/application
+  [1m[36mProperty Load (0.6ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  Rendered properties/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 313ms (Views: 309.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/properties/12" for ::1 at 2016-11-28 22:26:01 +0900
+Processing by PropertiesController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mProperty Load (0.3ms)[0m  [1m[34mSELECT  "properties".* FROM "properties" WHERE "properties"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering properties/show.html.erb within layouts/application
+  Rendered properties/show.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 54ms (Views: 25.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/properties/new" for ::1 at 2016-11-28 22:26:06 +0900
+Processing by PropertiesController#new as HTML
+  Rendering properties/new.html.erb within layouts/application
+  Rendered properties/new.html.erb within layouts/application (16.0ms)
+Completed 500 Internal Server Error in 33ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `line_name' for #<Property:0x007fb857c0dc00>
+Did you mean?  line_name_1
+               line_name_2
+               line_name_2?
+               line_name_2=
+               line_name_1=
+               line_name_1?):
+    30:   <h2>最寄り駅1</h2>
+    31:     <p>
+    32:       <%= f.label :line_name, "路線名" %><br>
+    33:       <%= f.text_field :line_name %>
+    34:     </p>
+    35: 
+    36:     <p>
+  
+app/views/properties/new.html.erb:33:in `block in _app_views_properties_new_html_erb__3289634382663162925_70214861480620'
+app/views/properties/new.html.erb:2:in `_app_views_properties_new_html_erb__3289634382663162925_70214861480620'
+  Rendering /Users/unomasanori/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/unomasanori/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/unomasanori/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.9ms)
+  Rendering /Users/unomasanori/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/unomasanori/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendering /Users/unomasanori/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/unomasanori/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/unomasanori/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (90.3ms)
+Started GET "/properties/new" for ::1 at 2016-11-28 22:26:36 +0900
+Processing by PropertiesController#new as HTML
+  Rendering properties/new.html.erb within layouts/application
+  Rendered properties/new.html.erb within layouts/application (17.5ms)
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `line_name' for #<Property:0x007fb85251e5e8>
+Did you mean?  line_name_1
+               line_name_2
+               line_name_2?
+               line_name_2=
+               line_name_1=
+               line_name_1?):
+    30:   <h2>最寄り駅1</h2>
+    31:     <p>
+    32:       <%= f.label :line_name, "路線名" %><br>
+    33:       <%= f.text_field :line_name %>
+    34:     </p>
+    35: 
+    36:     <p>
+  
+app/views/properties/new.html.erb:33:in `block in _app_views_properties_new_html_erb__3289634382663162925_70214815900520'
+app/views/properties/new.html.erb:2:in `_app_views_properties_new_html_erb__3289634382663162925_70214815900520'
+  Rendering /Users/unomasanori/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/unomasanori/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/unomasanori/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.4ms)
+  Rendering /Users/unomasanori/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/unomasanori/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendering /Users/unomasanori/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/unomasanori/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/unomasanori/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (87.6ms)
+Started GET "/properties/new" for ::1 at 2016-11-28 22:28:09 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PropertiesController#new as HTML
+  Rendering properties/new.html.erb within layouts/application
+  Rendered properties/new.html.erb within layouts/application (33.8ms)
+Completed 500 Internal Server Error in 74ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `line_name' for #<Property:0x007fc91f0bb590>
+Did you mean?  line_name_2
+               line_name_1
+               line_name_2?
+               line_name_2=
+               line_name_1?
+               line_name_1=):
+    30:   <h2>最寄り駅1</h2>
+    31:     <p>
+    32:       <%= f.label :line_name, "路線名" %><br>
+    33:       <%= f.text_field :line_name %>
+    34:     </p>
+    35: 
+    36:     <p>
+  
+app/views/properties/new.html.erb:33:in `block in _app_views_properties_new_html_erb__3262885572942037730_70250866672060'
+app/views/properties/new.html.erb:2:in `_app_views_properties_new_html_erb__3262885572942037730_70250866672060'
+  Rendering /Users/unomasanori/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/unomasanori/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/unomasanori/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (7.1ms)
+  Rendering /Users/unomasanori/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/unomasanori/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendering /Users/unomasanori/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/unomasanori/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/unomasanori/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (91.9ms)
+Started GET "/properties/new" for ::1 at 2016-11-28 22:29:18 +0900
+Processing by PropertiesController#new as HTML
+  Rendering properties/new.html.erb within layouts/application
+  Rendered properties/new.html.erb within layouts/application (14.0ms)
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `line_name' for #<Property:0x007fc91bee8180>
+Did you mean?  line_name_2
+               line_name_1
+               line_name_2?
+               line_name_2=
+               line_name_1?
+               line_name_1=):
+    30:   <h2>最寄り駅1</h2>
+    31:     <p>
+    32:       <%= f.label :line_name, "路線名" %><br>
+    33:       <%= f.text_field :line_name %>
+    34:     </p>
+    35: 
+    36:     <p>
+  
+app/views/properties/new.html.erb:33:in `block in _app_views_properties_new_html_erb__3262885572942037730_70250866872700'
+app/views/properties/new.html.erb:2:in `_app_views_properties_new_html_erb__3262885572942037730_70250866872700'
+  Rendering /Users/unomasanori/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/unomasanori/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/unomasanori/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.6ms)
+  Rendering /Users/unomasanori/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/unomasanori/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendering /Users/unomasanori/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/unomasanori/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/unomasanori/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (80.1ms)
+Started GET "/properties" for ::1 at 2016-11-28 22:32:34 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PropertiesController#index as HTML
+  Rendering properties/index.html.erb within layouts/application
+  [1m[36mProperty Load (0.6ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  Rendered properties/index.html.erb within layouts/application (30.3ms)
+Completed 200 OK in 368ms (Views: 346.1ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/properties/new" for ::1 at 2016-11-28 22:32:38 +0900
+Processing by PropertiesController#new as HTML
+  Rendering properties/new.html.erb within layouts/application
+  Rendered properties/new.html.erb within layouts/application (37.9ms)
+Completed 500 Internal Server Error in 51ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `line_name' for #<Property:0x007ff1a4078ee0>
+Did you mean?  line_name_2
+               line_name_1
+               line_name_2?
+               line_name_2=
+               line_name_1?
+               line_name_1=):
+    30:   <h2>最寄り駅1</h2>
+    31:     <p>
+    32:       <%= f.label :line_name, "路線名" %><br>
+    33:       <%= f.text_field :line_name %>
+    34:     </p>
+    35: 
+    36:     <p>
+  
+app/views/properties/new.html.erb:33:in `block in _app_views_properties_new_html_erb__57274287804928733_70337907736620'
+app/views/properties/new.html.erb:2:in `_app_views_properties_new_html_erb__57274287804928733_70337907736620'
+  Rendering /Users/unomasanori/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/unomasanori/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/unomasanori/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.9ms)
+  Rendering /Users/unomasanori/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/unomasanori/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendering /Users/unomasanori/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/unomasanori/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/unomasanori/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (98.2ms)
+Started GET "/properties" for ::1 at 2016-11-28 22:33:15 +0900
+Processing by PropertiesController#index as HTML
+  Rendering properties/index.html.erb within layouts/application
+  [1m[36mProperty Load (1.0ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  Rendered properties/index.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 53ms (Views: 49.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/properties/4/edit" for ::1 at 2016-11-28 22:33:17 +0900
+Processing by PropertiesController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mProperty Load (1.8ms)[0m  [1m[34mSELECT  "properties".* FROM "properties" WHERE "properties"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering properties/edit.html.erb within layouts/application
+  Rendered properties/edit.html.erb within layouts/application (22.4ms)
+Completed 200 OK in 82ms (Views: 58.1ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/properties/4/edit" for ::1 at 2016-11-28 22:33:20 +0900
+Processing by PropertiesController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mProperty Load (0.3ms)[0m  [1m[34mSELECT  "properties".* FROM "properties" WHERE "properties"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering properties/edit.html.erb within layouts/application
+  Rendered properties/edit.html.erb within layouts/application (17.2ms)
+Completed 200 OK in 80ms (Views: 76.1ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/properties/4" for ::1 at 2016-11-28 22:33:29 +0900
+Processing by PropertiesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"U8+v9kemo4UwVPIXhwqGyiRri5y825/4X+3tX5xy/XlAA7gBn0FI03jJBNpwyvIXKnIK+BCBVoUwnYNwz4WiNQ==", "property"=>{"property_name"=>"光栄はいつ", "rent"=>"1000000", "address"=>"栃木県佐野市", "age"=>"23", "remarks"=>"なし", "line_name_1"=>"東京", "station_name_1"=>"", "walk_fraction_1"=>"", "line_name_2"=>"名古屋", "station_name_2"=>"", "walk_fraction_2"=>""}, "commit"=>"更新する", "id"=>"4"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "properties" ("property_name", "rent", "address", "age", "remarks", "created_at", "updated_at", "line_name_1", "station_name_1", "line_name_2", "station_name_2", "walk_fraction_2") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["property_name", "光栄はいつ"], ["rent", "1000000"], ["address", "栃木県佐野市"], ["age", 23], ["remarks", "なし"], ["created_at", 2016-11-28 13:33:29 UTC], ["updated_at", 2016-11-28 13:33:29 UTC], ["line_name_1", "東京"], ["station_name_1", ""], ["line_name_2", "名古屋"], ["station_name_2", ""], ["walk_fraction_2", ""]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/properties/13
+Completed 302 Found in 115ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/properties/13" for ::1 at 2016-11-28 22:33:29 +0900
+Processing by PropertiesController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mProperty Load (0.5ms)[0m  [1m[34mSELECT  "properties".* FROM "properties" WHERE "properties"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  Rendering properties/show.html.erb within layouts/application
+  Rendered properties/show.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 45ms (Views: 40.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/properties" for ::1 at 2016-11-28 22:33:34 +0900
+Processing by PropertiesController#index as HTML
+  Rendering properties/index.html.erb within layouts/application
+  [1m[36mProperty Load (1.5ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  Rendered properties/index.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 45ms (Views: 39.3ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/properties/new" for ::1 at 2016-11-28 22:33:36 +0900
+Processing by PropertiesController#new as HTML
+  Rendering properties/new.html.erb within layouts/application
+  Rendered properties/new.html.erb within layouts/application (32.9ms)
+Completed 500 Internal Server Error in 46ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `line_name' for #<Property:0x007ff1a7fab630>
+Did you mean?  line_name_2
+               line_name_1
+               line_name_2?
+               line_name_2=
+               line_name_1?
+               line_name_1=):
+    30:   <h2>最寄り駅1</h2>
+    31:     <p>
+    32:       <%= f.label :line_name, "路線名" %><br>
+    33:       <%= f.text_field :line_name %>
+    34:     </p>
+    35: 
+    36:     <p>
+  
+app/views/properties/new.html.erb:33:in `block in _app_views_properties_new_html_erb__57274287804928733_70337941032740'
+app/views/properties/new.html.erb:2:in `_app_views_properties_new_html_erb__57274287804928733_70337941032740'
+  Rendering /Users/unomasanori/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/unomasanori/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/unomasanori/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.0ms)
+  Rendering /Users/unomasanori/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/unomasanori/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendering /Users/unomasanori/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/unomasanori/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/unomasanori/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (97.7ms)
+Started GET "/properties/new" for ::1 at 2016-11-28 22:34:59 +0900
+Processing by PropertiesController#new as HTML
+  Rendering properties/new.html.erb within layouts/application
+  Rendered properties/new.html.erb within layouts/application (15.3ms)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `line_name' for #<Property:0x007ff1aa86a9b8>
+Did you mean?  line_name_2
+               line_name_1
+               line_name_2?
+               line_name_2=
+               line_name_1?
+               line_name_1=):
+    30:   <h2>最寄り駅1</h2>
+    31:     <p>
+    32:       <%= f.label :line_name, "路線名" %><br>
+    33:       <%= f.text_field :line_name %>
+    34:     </p>
+    35: 
+    36:     <p>
+  
+app/views/properties/new.html.erb:33:in `block in _app_views_properties_new_html_erb__57274287804928733_70337962396020'
+app/views/properties/new.html.erb:2:in `_app_views_properties_new_html_erb__57274287804928733_70337962396020'
+  Rendering /Users/unomasanori/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/unomasanori/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/unomasanori/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.8ms)
+  Rendering /Users/unomasanori/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/unomasanori/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendering /Users/unomasanori/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/unomasanori/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/unomasanori/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (90.9ms)
+Started GET "/properties" for ::1 at 2016-11-28 22:35:02 +0900
+Processing by PropertiesController#index as HTML
+  Rendering properties/index.html.erb within layouts/application
+  [1m[36mProperty Load (0.2ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  Rendered properties/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 35ms (Views: 32.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/properties/8" for ::1 at 2016-11-28 22:35:05 +0900
+Processing by PropertiesController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mProperty Load (0.3ms)[0m  [1m[34mSELECT  "properties".* FROM "properties" WHERE "properties"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering properties/show.html.erb within layouts/application
+  Rendered properties/show.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 48ms (Views: 35.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/properties/5" for ::1 at 2016-11-28 22:35:09 +0900
+Processing by PropertiesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mProperty Load (0.4ms)[0m  [1m[34mSELECT  "properties".* FROM "properties" WHERE "properties"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering properties/show.html.erb within layouts/application
+  Rendered properties/show.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 34ms (Views: 29.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/properties/5/edit" for ::1 at 2016-11-28 22:35:11 +0900
+Processing by PropertiesController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mProperty Load (0.2ms)[0m  [1m[34mSELECT  "properties".* FROM "properties" WHERE "properties"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering properties/edit.html.erb within layouts/application
+  Rendered properties/edit.html.erb within layouts/application (12.8ms)
+Completed 200 OK in 55ms (Views: 49.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/properties/4/edit" for ::1 at 2016-11-28 22:35:16 +0900
+Processing by PropertiesController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mProperty Load (0.2ms)[0m  [1m[34mSELECT  "properties".* FROM "properties" WHERE "properties"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering properties/edit.html.erb within layouts/application
+  Rendered properties/edit.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 49ms (Views: 45.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/properties/4" for ::1 at 2016-11-28 22:35:18 +0900
+Processing by PropertiesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mProperty Load (0.3ms)[0m  [1m[34mSELECT  "properties".* FROM "properties" WHERE "properties"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering properties/show.html.erb within layouts/application
+  Rendered properties/show.html.erb within layouts/application (10.8ms)
+Completed 200 OK in 53ms (Views: 46.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/properties/new" for ::1 at 2016-11-28 22:37:03 +0900
+Processing by PropertiesController#new as HTML
+  Rendering properties/new.html.erb within layouts/application
+  Rendered properties/new.html.erb within layouts/application (37.0ms)
+Completed 500 Internal Server Error in 63ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `line_name' for #<Property:0x007ff1a7df9328>
+Did you mean?  line_name_2
+               line_name_1
+               line_name_2?
+               line_name_2=
+               line_name_1?
+               line_name_1=):
+    30:   <h2>最寄り駅1</h2>
+    31:     <p>
+    32:       <%= f.label :line_name, "路線名" %><br>
+    33:       <%= f.text_field :line_name %>
+    34:     </p>
+    35: 
+    36:     <p>
+  
+app/views/properties/new.html.erb:33:in `block in _app_views_properties_new_html_erb__57274287804928733_70337940131260'
+app/views/properties/new.html.erb:2:in `_app_views_properties_new_html_erb__57274287804928733_70337940131260'
+  Rendering /Users/unomasanori/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/unomasanori/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/unomasanori/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (8.9ms)
+  Rendering /Users/unomasanori/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/unomasanori/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendering /Users/unomasanori/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/unomasanori/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /Users/unomasanori/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (105.8ms)
+Started GET "/properties/new" for ::1 at 2016-11-28 22:40:21 +0900
+Processing by PropertiesController#new as HTML
+  Rendering properties/new.html.erb within layouts/application
+  Rendered properties/new.html.erb within layouts/application (14.6ms)
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `line_name' for #<Property:0x007ff1a8c070a0>
+Did you mean?  line_name_2
+               line_name_1
+               line_name_2?
+               line_name_2=
+               line_name_1?
+               line_name_1=):
+    30:   <h2>最寄り駅1</h2>
+    31:     <p>
+    32:       <%= f.label :line_name, "路線名" %><br>
+    33:       <%= f.text_field :line_name %>
+    34:     </p>
+    35: 
+    36:     <p>
+  
+app/views/properties/new.html.erb:33:in `block in _app_views_properties_new_html_erb__57274287804928733_70337947511860'
+app/views/properties/new.html.erb:2:in `_app_views_properties_new_html_erb__57274287804928733_70337947511860'
+  Rendering /Users/unomasanori/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/unomasanori/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/unomasanori/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.3ms)
+  Rendering /Users/unomasanori/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/unomasanori/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendering /Users/unomasanori/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/unomasanori/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/unomasanori/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (104.7ms)
+Started GET "/properties/new" for ::1 at 2016-11-28 22:41:43 +0900
+Processing by PropertiesController#new as HTML
+  Rendering properties/new.html.erb within layouts/application
+  Rendered properties/new.html.erb within layouts/application (13.6ms)
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `line_name' for #<Property:0x007ff1a56f4610>
+Did you mean?  line_name_2
+               line_name_1
+               line_name_2?
+               line_name_2=
+               line_name_1?
+               line_name_1=):
+    30:   <h2>最寄り駅1</h2>
+    31:     <p>
+    32:       <%= f.label :line_name, "路線名" %><br>
+    33:       <%= f.text_field :line_name %>
+    34:     </p>
+    35: 
+    36:     <p>
+  
+app/views/properties/new.html.erb:33:in `block in _app_views_properties_new_html_erb__57274287804928733_70337919678040'
+app/views/properties/new.html.erb:2:in `_app_views_properties_new_html_erb__57274287804928733_70337919678040'
+  Rendering /Users/unomasanori/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/unomasanori/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/unomasanori/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (9.9ms)
+  Rendering /Users/unomasanori/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/unomasanori/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendering /Users/unomasanori/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/unomasanori/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/unomasanori/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (91.2ms)
+Started GET "/properties/new" for ::1 at 2016-11-28 22:42:28 +0900
+Processing by PropertiesController#new as HTML
+  Rendering properties/new.html.erb within layouts/application
+  Rendered properties/new.html.erb within layouts/application (16.0ms)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `line_name' for #<Property:0x007ff1a51e84c8>
+Did you mean?  line_name_2
+               line_name_1
+               line_name_2?
+               line_name_2=
+               line_name_1?
+               line_name_1=):
+    30:   <h2>最寄り駅1</h2>
+    31:     <p>
+    32:       <%= f.label :line_name, "路線名" %><br>
+    33:       <%= f.text_field :line_name %>
+    34:     </p>
+    35: 
+    36:     <p>
+  
+app/views/properties/new.html.erb:33:in `block in _app_views_properties_new_html_erb__57274287804928733_70337938801180'
+app/views/properties/new.html.erb:2:in `_app_views_properties_new_html_erb__57274287804928733_70337938801180'
+  Rendering /Users/unomasanori/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/unomasanori/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/unomasanori/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.6ms)
+  Rendering /Users/unomasanori/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/unomasanori/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendering /Users/unomasanori/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/unomasanori/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/unomasanori/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (82.4ms)
+Started GET "/properties" for ::1 at 2016-11-28 22:43:15 +0900
+Processing by PropertiesController#index as HTML
+  Rendering properties/index.html.erb within layouts/application
+  [1m[36mProperty Load (0.4ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  Rendered properties/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 40ms (Views: 37.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/properties/new" for ::1 at 2016-11-28 22:43:17 +0900
+Processing by PropertiesController#new as HTML
+  Rendering properties/new.html.erb within layouts/application
+  Rendered properties/new.html.erb within layouts/application (20.2ms)
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `line_name' for #<Property:0x007ff1a7ccbc08>
+Did you mean?  line_name_2
+               line_name_1
+               line_name_2?
+               line_name_2=
+               line_name_1?
+               line_name_1=):
+    30:   <h2>最寄り駅1</h2>
+    31:     <p>
+    32:       <%= f.label :line_name, "路線名" %><br>
+    33:       <%= f.text_field :line_name %>
+    34:     </p>
+    35: 
+    36:     <p>
+  
+app/views/properties/new.html.erb:33:in `block in _app_views_properties_new_html_erb__57274287804928733_70337939522120'
+app/views/properties/new.html.erb:2:in `_app_views_properties_new_html_erb__57274287804928733_70337939522120'
+  Rendering /Users/unomasanori/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/unomasanori/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/unomasanori/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (7.4ms)
+  Rendering /Users/unomasanori/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/unomasanori/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendering /Users/unomasanori/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/unomasanori/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/unomasanori/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (85.3ms)
+Started GET "/properties" for ::1 at 2016-11-28 22:43:53 +0900
+Processing by PropertiesController#index as HTML
+  Rendering properties/index.html.erb within layouts/application
+  [1m[36mProperty Load (0.3ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  Rendered properties/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 25ms (Views: 21.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/properties/6/edit" for ::1 at 2016-11-28 22:43:55 +0900
+Processing by PropertiesController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mProperty Load (0.2ms)[0m  [1m[34mSELECT  "properties".* FROM "properties" WHERE "properties"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering properties/edit.html.erb within layouts/application
+  Rendered properties/edit.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 42ms (Views: 29.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/properties" for ::1 at 2016-11-28 22:44:53 +0900
+Processing by PropertiesController#index as HTML
+  Rendering properties/index.html.erb within layouts/application
+  [1m[36mProperty Load (0.4ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  Rendered properties/index.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 45ms (Views: 41.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/properties/new" for ::1 at 2016-11-28 22:44:54 +0900
+Processing by PropertiesController#new as HTML
+  Rendering properties/new.html.erb within layouts/application
+  Rendered properties/new.html.erb within layouts/application (17.5ms)
+Completed 500 Internal Server Error in 35ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `line_name' for #<Property:0x007ff1a7a62de0>
+Did you mean?  line_name_2
+               line_name_1
+               line_name_2?
+               line_name_2=
+               line_name_1?
+               line_name_1=):
+    30:   <h2>最寄り駅1</h2>
+    31:     <p>
+    32:       <%= f.label :line_name, "路線名" %><br>
+    33:       <%= f.text_field :line_name %>
+    34:     </p>
+    35: 
+    36:     <p>
+  
+app/views/properties/new.html.erb:33:in `block in _app_views_properties_new_html_erb__57274287804928733_70337938244000'
+app/views/properties/new.html.erb:2:in `_app_views_properties_new_html_erb__57274287804928733_70337938244000'
+  Rendering /Users/unomasanori/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/unomasanori/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/unomasanori/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.1ms)
+  Rendering /Users/unomasanori/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/unomasanori/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendering /Users/unomasanori/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/unomasanori/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/unomasanori/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (86.7ms)
+Started GET "/properties/new" for ::1 at 2016-11-28 22:47:33 +0900
+Processing by PropertiesController#new as HTML
+  Rendering properties/new.html.erb within layouts/application
+  Rendered properties/new.html.erb within layouts/application (13.6ms)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `line_name' for #<Property:0x007ff1a887d358>
+Did you mean?  line_name_2
+               line_name_1
+               line_name_2?
+               line_name_2=
+               line_name_1?
+               line_name_1=):
+    30:   <h2>最寄り駅1</h2>
+    31:     <p>
+    32:       <%= f.label :line_name, "路線名" %><br>
+    33:       <%= f.text_field :line_name %>
+    34:     </p>
+    35: 
+    36:     <p>
+  
+app/views/properties/new.html.erb:33:in `block in _app_views_properties_new_html_erb__57274287804928733_70337918209320'
+app/views/properties/new.html.erb:2:in `_app_views_properties_new_html_erb__57274287804928733_70337918209320'
+  Rendering /Users/unomasanori/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/unomasanori/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/unomasanori/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.2ms)
+  Rendering /Users/unomasanori/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/unomasanori/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.7ms)
+  Rendering /Users/unomasanori/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/unomasanori/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/unomasanori/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (98.8ms)
+Started GET "/properties/new" for ::1 at 2016-11-28 22:47:36 +0900
+Processing by PropertiesController#new as HTML
+  Rendering properties/new.html.erb within layouts/application
+  Rendered properties/new.html.erb within layouts/application (17.2ms)
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `line_name' for #<Property:0x007ff1a7f6fcc0>
+Did you mean?  line_name_2
+               line_name_1
+               line_name_2?
+               line_name_2=
+               line_name_1?
+               line_name_1=):
+    30:   <h2>最寄り駅1</h2>
+    31:     <p>
+    32:       <%= f.label :line_name, "路線名" %><br>
+    33:       <%= f.text_field :line_name %>
+    34:     </p>
+    35: 
+    36:     <p>
+  
+app/views/properties/new.html.erb:33:in `block in _app_views_properties_new_html_erb__57274287804928733_70337940910780'
+app/views/properties/new.html.erb:2:in `_app_views_properties_new_html_erb__57274287804928733_70337940910780'
+  Rendering /Users/unomasanori/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/unomasanori/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/unomasanori/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.7ms)
+  Rendering /Users/unomasanori/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/unomasanori/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendering /Users/unomasanori/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/unomasanori/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/unomasanori/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (92.2ms)
+Started GET "/properties/new" for ::1 at 2016-11-28 22:56:30 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PropertiesController#new as HTML
+  Rendering properties/new.html.erb within layouts/application
+  Rendered properties/new.html.erb within layouts/application (28.4ms)
+Completed 200 OK in 387ms (Views: 354.4ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/properties" for ::1 at 2016-11-28 22:57:21 +0900
+Processing by PropertiesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hAzBKtQJZImxpI3ECRXLUOZ/h/5D3ySsJO27hxpkVRtNi6kks3jLhqSyoEXqJ+43K3nAiK989ElM7SHI6g3tvg==", "property"=>{"property_name"=>"新鋭はいつ", "rent"=>"50000", "address"=>"千葉県", "age"=>"32", "remarks"=>"しんこ物件", "line_name_1"=>"JR線", "station_name_1"=>"湾岸駅", "walk_fraction_1"=>"3", "line_name_2"=>"京急", "station_name_2"=>"蒲田", "walk_fraction_2"=>"4"}, "commit"=>"登録する"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "properties" ("property_name", "rent", "address", "age", "remarks", "created_at", "updated_at", "line_name_1", "station_name_1", "walk_fraction_1", "line_name_2", "station_name_2", "walk_fraction_2") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["property_name", "新鋭はいつ"], ["rent", "50000"], ["address", "千葉県"], ["age", 32], ["remarks", "しんこ物件"], ["created_at", 2016-11-28 13:57:21 UTC], ["updated_at", 2016-11-28 13:57:21 UTC], ["line_name_1", "JR線"], ["station_name_1", "湾岸駅"], ["walk_fraction_1", 3], ["line_name_2", "京急"], ["station_name_2", "蒲田"], ["walk_fraction_2", "4"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/properties/14
+Completed 302 Found in 13ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/properties/14" for ::1 at 2016-11-28 22:57:21 +0900
+Processing by PropertiesController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mProperty Load (0.2ms)[0m  [1m[34mSELECT  "properties".* FROM "properties" WHERE "properties"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  Rendering properties/show.html.erb within layouts/application
+  Rendered properties/show.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 70ms (Views: 63.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/properties/14/edit" for ::1 at 2016-11-28 22:57:24 +0900
+Processing by PropertiesController#edit as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mProperty Load (0.1ms)[0m  [1m[34mSELECT  "properties".* FROM "properties" WHERE "properties"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  Rendering properties/edit.html.erb within layouts/application
+  Rendered properties/edit.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 45ms (Views: 30.3ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/properties/14" for ::1 at 2016-11-28 22:57:32 +0900
+Processing by PropertiesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lfkb5oH88V50GHrf6OX+9VxvojEqQOpjdw/0PTKIVJip0yiPOr0iY7+5qHXaN5NGHLlaF7J9WilLqqCsIn7Muw==", "property"=>{"property_name"=>"新鋭はいつ", "rent"=>"50000", "address"=>"千葉県", "age"=>"32", "remarks"=>"しんこ物件", "line_name_1"=>"JR線", "station_name_1"=>"湾岸駅", "walk_fraction_1"=>"3", "line_name_2"=>"京急", "station_name_2"=>"よよしま", "walk_fraction_2"=>"4"}, "commit"=>"更新する", "id"=>"14"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "properties" ("property_name", "rent", "address", "age", "remarks", "created_at", "updated_at", "line_name_1", "station_name_1", "walk_fraction_1", "line_name_2", "station_name_2", "walk_fraction_2") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["property_name", "新鋭はいつ"], ["rent", "50000"], ["address", "千葉県"], ["age", 32], ["remarks", "しんこ物件"], ["created_at", 2016-11-28 13:57:32 UTC], ["updated_at", 2016-11-28 13:57:32 UTC], ["line_name_1", "JR線"], ["station_name_1", "湾岸駅"], ["walk_fraction_1", 3], ["line_name_2", "京急"], ["station_name_2", "よよしま"], ["walk_fraction_2", "4"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/properties/15
+Completed 302 Found in 11ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/properties/15" for ::1 at 2016-11-28 22:57:32 +0900
+Processing by PropertiesController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mProperty Load (0.3ms)[0m  [1m[34mSELECT  "properties".* FROM "properties" WHERE "properties"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  Rendering properties/show.html.erb within layouts/application
+  Rendered properties/show.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 39ms (Views: 35.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/properties" for ::1 at 2016-11-28 22:57:35 +0900
+Processing by PropertiesController#index as HTML
+  Rendering properties/index.html.erb within layouts/application
+  [1m[36mProperty Load (0.3ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  Rendered properties/index.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 57ms (Views: 36.8ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/properties/8" for ::1 at 2016-11-28 22:57:40 +0900
+Processing by PropertiesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"c2T2MKERfUE/UDYOnhEfCgGUmZd8tz/59B3MO0I7nZO6454+xmDSTipGG499IzptzJLe4ZAU7xycHVZ0slIlNg==", "id"=>"8"}
+  [1m[36mProperty Load (0.1ms)[0m  [1m[34mSELECT  "properties".* FROM "properties" WHERE "properties"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "properties" WHERE "properties"."id" = ?[0m  [["id", 8]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/properties
+Completed 302 Found in 7ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/properties" for ::1 at 2016-11-28 22:57:40 +0900
+Processing by PropertiesController#index as HTML
+  Rendering properties/index.html.erb within layouts/application
+  [1m[36mProperty Load (0.2ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  Rendered properties/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 48ms (Views: 43.5ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/properties/14" for ::1 at 2016-11-28 22:57:42 +0900
+Processing by PropertiesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"br8TqlZO9kAWk6Gu6uDvNP8QG6cX9BxNmxvHqMWB0OSnOHukMT9ZTwOFjC8J0spTMhZc0ftXzKjzG13nNehoQQ==", "id"=>"14"}
+  [1m[36mProperty Load (0.1ms)[0m  [1m[34mSELECT  "properties".* FROM "properties" WHERE "properties"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "properties" WHERE "properties"."id" = ?[0m  [["id", 14]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/properties
+Completed 302 Found in 7ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/properties" for ::1 at 2016-11-28 22:57:42 +0900
+Processing by PropertiesController#index as HTML
+  Rendering properties/index.html.erb within layouts/application
+  [1m[36mProperty Load (0.2ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  Rendered properties/index.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 29ms (Views: 27.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/properties/new" for ::1 at 2016-11-28 22:57:45 +0900
+Processing by PropertiesController#new as HTML
+  Rendering properties/new.html.erb within layouts/application
+  Rendered properties/new.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 46ms (Views: 35.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/properties" for ::1 at 2016-11-28 22:57:47 +0900
+Processing by PropertiesController#index as HTML
+  Rendering properties/index.html.erb within layouts/application
+  [1m[36mProperty Load (0.6ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  Rendered properties/index.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 42ms (Views: 39.2ms | ActiveRecord: 0.6ms)
+
+
